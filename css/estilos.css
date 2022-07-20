@@ -1,3 +1,18 @@
 h1{
+    background-color: blue;
+    color: wheat;
+}
+.producto{
+    height: 250px;
+    width: 200px;
+    border: solid red;
+    text-align: center;
+    margin-left: 30%;
+}
+
+.productoImagen{
+    height: 100px;
+    width: 70%;
     background-color: red;
+    margin-left: 30px;
 }

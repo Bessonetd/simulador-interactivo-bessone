@@ -1,36 +1,44 @@
-function descuento(parametro1, parametro2, parametro3) {
-    resultado = (parametro1 * parametro2) / parametro3
-    return(resultado)
+function descuento(parametro1, parametro2) {
+    resultadoDescuento = parametro1 * parametro2
+    return(resultadoDescuento)
+}
+function cantidadTotal(parametro1, parametro2) {
+    precioTotal = parametro1 * parametro2
+    return(precioTotal)
 }
 
-while(true){
-
-    let producto = prompt("Que producto desea? \n Almohada $100 \n Toalla Turbante $200 \n Traba Puerta $300")
+    let producto = parseInt(prompt("Ingrese el numero de la opcion que desea \n 1) Almohada $100 \n 2) Toalla Turbante $200 \n 3) Traba Puerta $300 \n Ingrese 0 para cancelar la operacion"))
 
     let cantidad = parseInt(prompt("Cuantos quiere?"))
 
-    if (producto.toLowerCase() == "almohada") {
-        let resu1 = cantidad * 100
-        console.log(resu1)
-        descuento(resu1, 20, 100)
-        alert("Usted eligio:" + "\n" + "Producto: " + producto + "\n" + "Cantidad: " + cantidad + "\n" + "Total: " + resu1 + "\n" + "Descuento: " + resultado)
-        break
-    } 
-    else if (producto.toLowerCase() == "toalla turbante"){
-        let resu2 = cantidad * 200
-        console.log(resu2)
-        descuento(resu2, 20, 100)
-        alert("Usted eligio:" + "\n" + "Producto: " + producto + "\n" + "Cantidad: " + cantidad + "\n" + "Total: " + resu2 + "\n" + "Descuento: " + resultado)
-        break
+    while(producto != 0){
+        switch(producto){
+            case 1:
+                
+                cantidadTotal(cantidad, 100)
+                console.log(precioTotal)
+
+                descuento(precioTotal, 0.2)
+                break;
+            case 2:
+                cantidadTotal(cantidad, 200)
+                console.log(precioTotal)
+
+                descuento(precioTotal, 0.2)
+                break;
+            case 3:
+                cantidadTotal(cantidad, 300)
+                console.log(precioTotal)
+
+                descuento(precioTotal, 0.2)
+                break;
+            default:
+                alert("Eleccion no valida")
+                break;    
+
+        }
+        alert("Usted eligio:" + "\n" + "Producto: " + producto + "\n" + "Cantidad: " + cantidad + "\n" + "Total: " + precioTotal + "\n" + "Descuento: " + resultadoDescuento)
+        break;
     }
-    else if (producto.toLowerCase() == "traba puerta"){
-        let resu3 = cantidad * 300
-        console.log(resu3)
-        descuento(resu3, 20, 100)
-        alert("Usted eligio:" + "\n" + "Producto: " + producto + "\n" + "Cantidad: " + cantidad + "\n" + "Total: " + resu3 + "\n" + "Descuento: " + resultado)
-        break
-    }
-    else{
-        alert("Eleccion no valida")
-    }
-}
+
+    
