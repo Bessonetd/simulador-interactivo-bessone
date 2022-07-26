@@ -1,3 +1,17 @@
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre  = nombre;
+        this.precio  = parseFloat(precio);
+    }
+}
+
+const productos = [];
+productos.push(new Producto("Almohada", "100"));
+productos.push(new Producto("Toalla Turbante", "200"));
+productos.push(new Producto("Traba Puerta", "300"));
+    
+console.log(productos)
+
 function descuento(parametro1, parametro2) {
     resultadoDescuento = parametro1 * parametro2
     return(resultadoDescuento)
@@ -40,5 +54,3 @@ function cantidadTotal(parametro1, parametro2) {
         alert("Usted eligio:" + "\n" + "Producto: " + producto + "\n" + "Cantidad: " + cantidad + "\n" + "Total: " + precioTotal + "\n" + "Descuento: " + resultadoDescuento)
         break;
     }
-
-    
